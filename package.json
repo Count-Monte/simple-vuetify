@@ -1,0 +1,25 @@
+{
+  "name": "assessment",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --port 3006",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@iconify-json/iconoir": "^1.1.42",
+    "@mdi/font": "7.0.96",
+    "roboto-fontface": "*",
+    "vue": "^3.3.0",
+    "vuetify": "^3.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "sass": "^1.71.1",
+    "unocss": "^0.58.5",
+    "unplugin-fonts": "^1.1.1",
+    "unplugin-vue-components": "^0.26.0",
+    "vite": "^5.1.5",
+    "vite-plugin-vuetify": "^2.0.3"
+  }
+}
