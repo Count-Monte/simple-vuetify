@@ -153,40 +153,47 @@
               stationes nets.
             </div>
             <v-row class="mt-5">
-              <div
-                v-for="(item, index) in ['TrustPilot', 'Feefo']"
-                :key="item"
-                class="px-3"
-                :class="{ 'border-right': index === 0 }"
+              <div v-for="(item, index) in ['TrustPilot', 'Feefo']"
+              :key="item"
               >
-                <div class="font-weight-bold text-blue-grey-darken-4">{{
-                  item
-                }}</div>
-                <div
-                  ><v-icon
-                    v-for="n in 5"
-                    :key="n"
-                    class="text-yellow-darken-2 ml-0"
-                    icon="mdi-star"
-                    end
-                  ></v-icon
-                ></div>
+                <v-alert
+                  :border="index === 1 ? 'start' : 'none'"
+                  border-color="grey"
+                  class="pt-3 bg-transparent rounded-0"
+                >
+                  <div class="font-weight-bold text-blue-grey-darken-4">{{
+                    item
+                  }}</div>
+                  <div
+                    ><v-icon
+                      v-for="n in 5"
+                      :key="n"
+                      class="text-yellow-darken-2 ml-0"
+                      icon="mdi-star"
+                      end
+                    ></v-icon
+                  ></div>
+                </v-alert>
               </div>
             </v-row>
           </v-col>
           <v-col>
-            <v-card
-              class="pa-5 rounded-0 d-flex flex-row align-center justify-between my-10 elevation-5"
-              style="border-left: 5px solid #27b36a"
+            <v-alert
               v-for="n in 3"
               :key="n"
+              class="my-5 elevation-5 bg-white"
+              border="start"
+              border-color="#27b36a"
+              outlined
             >
-              <img src="./assets/avatar.png" />
-              <div class="font-weight-bold text-blue-grey-darken-4 text-h6">
-                John Done /
-                <span class="text-green-lighten-1">CEO - Epic Design</span>
+              <div class="d-flex flex-row align-center ga-3">
+                <img src="./assets/avatar.png" />
+                <div class="font-weight-bold text-blue-grey-darken-4 text-h6">
+                  John Done /
+                  <span class="text-green-lighten-1">CEO - Epic Design</span>
+                </div>
               </div>
-            </v-card>
+            </v-alert>
           </v-col>
         </v-row>
       </v-sheet>
@@ -215,9 +222,10 @@
         </div>
         <v-row class="pa-10">
           <v-col v-for="person in team" :key="person.name" class="pa-5">
-            <div
+            <v-card
               class="bg-white rounded-t-xl pb-5"
-              style="border: 1px solid #dddddd"
+              border="primary md"
+              flat
             >
               <img :src="person.image" class="w-100 rounded-t-xl" />
               <div class="mt-3 text-body-1">{{ person.name }}</div>
@@ -227,7 +235,7 @@
               <div class="mt-5 text-grey-darken-1 mx-5">
                 {{ person.description }}
               </div>
-            </div>
+            </v-card>
           </v-col>
         </v-row>
       </v-sheet>
@@ -369,9 +377,8 @@
             <v-text-field
               bg-color="transparent"
               single-line
+              variant="outlined"
               hide-details
-              variant="solo"
-              class="contact-input"
               flat
               label="Your Name*"
             />
@@ -381,8 +388,7 @@
               bg-color="transparent"
               single-line
               hide-details
-              variant="solo"
-              class="contact-input"
+              variant="outlined"
               flat
               label="Email Address*"
             />
@@ -392,8 +398,7 @@
               bg-color="transparent"
               single-line
               hide-details
-              variant="solo"
-              class="contact-input"
+              variant="outlined"
               flat
               label="Phone Number*"
             />
@@ -403,8 +408,7 @@
               bg-color="transparent"
               single-line
               hide-details
-              variant="solo"
-              class="contact-input"
+              variant="outlined"
               flat
               label="Option*"
             />
@@ -414,8 +418,7 @@
               bg-color="transparent"
               lines="4"
               hide-details
-              variant="solo"
-              class="contact-input"
+              variant="outlined"
               flat
               label="Your Message..."
             />
@@ -436,21 +439,6 @@
     </div>
   </v-app>
 </template>
-
-<style scoped>
-.contact-input {
-  border: 1px solid white;
-}
-
-input::placeholder {
-  color: white !important;
-  opacity: 1 !important;
-}
-
-.border-right {
-  border-right: 1px solid rgb(224, 224, 224);
-}
-</style>
 
 <script setup>
 const features = [
