@@ -1,5 +1,5 @@
 <template>
-  <v-app theme="light" style="max-width: 1200px;" class="ma-auto">
+  <v-app theme="light" style="max-width: 1200px" class="ma-auto">
     <v-toolbar class="pl-5">
       <template #prepend>
         <div class="text-h4 font-weight-bold my-5 red text-red-darken-2">
@@ -9,13 +9,13 @@
 
       <template #append>
         <div class="hidden-sm-and-down">
-          <v-btn text class="text-body-1 blue-grey-darken-4">Home</v-btn>
-          <v-btn text class="text-body-1 blue-grey-darken-4">About</v-btn>
-          <v-btn text class="text-body-1 blue-grey-darken-4">Testimonals</v-btn>
-          <v-btn text class="text-body-1 blue-grey-darken-4">Work</v-btn>
-          <v-btn text class="text-body-1 blue-grey-darken-4">Team</v-btn>
-          <v-btn text class="text-body-1 blue-grey-darken-4">Features</v-btn>
-          <v-btn text class="text-body-1 blue-grey-darken-4">Pricing</v-btn>
+          <v-btn
+            v-for="item in menu"
+            :key="item"
+            variant="text"
+            class="text-body-1 blue-grey-darken-4"
+            >{{ item }}</v-btn
+          >
         </div>
       </template>
     </v-toolbar>
@@ -442,6 +442,15 @@
 </template>
 
 <script setup>
+const menu = [
+  "Home",
+  "About",
+  "Testimonals",
+  "Work",
+  "Team",
+  "Features",
+  "Pricing",
+];
 const features = [
   {
     icon: "./assets/features/support.png",

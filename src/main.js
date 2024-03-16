@@ -13,9 +13,6 @@ import App from './App.vue'
 // Composables
 import { createApp } from 'vue'
 
-// Import CSS
-import './main.css'
-
 const app = createApp(App)
 
 registerPlugins(app)
