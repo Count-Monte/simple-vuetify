@@ -61,7 +61,7 @@
             class="d-flex flex-column align-center"
           >
             <img :src="item.icon" />
-            <div class="text-h6">{{ item.title }}</div>
+            <div class="text-h6 mt-1">{{ item.title }}</div>
             <div class="text-body-1 mt-2 text-grey-darken-2 w-75">
               {{ item.description }}
             </div>
@@ -137,7 +137,7 @@
         <div class="text-h3 font-weight-bold mb-5">
           Fun Facts About Our Agency
         </div>
-        <v-row class="mx-20">
+        <v-row class="mx-15">
           <v-col class="mt-10" v-for="item in agency" :key="item.title">
             <img :src="item.icon" />
             <div class="text-h4 font-weight-bold mt-5">{{ item.title }}</div>
