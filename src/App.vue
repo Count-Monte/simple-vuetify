@@ -1,5 +1,5 @@
 <template>
-  <v-app theme="light" style="max-width: 1200px; margin: auto">
+  <v-app theme="light" style="max-width: 1200px;" class="ma-auto">
     <v-toolbar class="pl-5">
       <template #prepend>
         <div class="text-h4 font-weight-bold my-5 red text-red-darken-2">
@@ -183,7 +183,7 @@
             <v-alert
               v-for="n in 3"
               :key="n"
-              class="my-5 elevation-5 bg-white"
+              class="my-5 elevation-5 bg-white rounded-0"
               border="start"
               border-color="#27b36a"
               outlined
