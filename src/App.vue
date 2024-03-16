@@ -83,7 +83,11 @@
             Venis demo enim ipsam voluptatem quia voluptas sit aspernatur netsum
             lorem fugit, seditum netis velas matrix net nesciunt
           </div>
-          <div class="text-grey-darken-1 my-2" v-for="text in discover_text" :key="text">
+          <div
+            class="text-grey-darken-1 my-2"
+            v-for="text in discover_text"
+            :key="text"
+          >
             <v-icon icon="mdi-check-bold" color="red" end />
             {{ text }}
           </div>
@@ -153,26 +157,24 @@
               stationes nets.
             </div>
             <v-row class="mt-5">
-              <div v-for="(item, index) in ['TrustPilot', 'Feefo']"
-              :key="item"
-              >
+              <div v-for="(item, index) in ['TrustPilot', 'Feefo']" :key="item">
                 <v-alert
                   :border="index === 1 ? 'start' : 'none'"
                   border-color="grey"
                   class="pt-3 bg-transparent rounded-0"
                 >
-                  <div class="font-weight-bold text-blue-grey-darken-4">{{
-                    item
-                  }}</div>
-                  <div
-                    ><v-icon
+                  <div class="font-weight-bold text-blue-grey-darken-4">
+                    {{ item }}
+                  </div>
+                  <div>
+                    <v-icon
                       v-for="n in 5"
                       :key="n"
                       class="text-yellow-darken-2 ml-0"
                       icon="mdi-star"
                       end
-                    ></v-icon
-                  ></div>
+                    ></v-icon>
+                  </div>
                 </v-alert>
               </div>
             </v-row>
@@ -222,11 +224,7 @@
         </div>
         <v-row class="pa-10">
           <v-col v-for="person in team" :key="person.name" class="pa-5">
-            <v-card
-              class="bg-white rounded-t-xl pb-5"
-              border="primary md"
-              flat
-            >
+            <v-card class="bg-white rounded-t-xl pb-5" border="primary md" flat>
               <img :src="person.image" class="w-100 rounded-t-xl" />
               <div class="mt-3 text-body-1">{{ person.name }}</div>
               <div class="mt-3 text-grey-lighten-1 font-italic text-body-1">
@@ -316,7 +314,10 @@
               <div class="text-h6 font-weight-bold">MONTHLY</div>
               <div class="text-h2 font-weight-bold">$19</div>
               <div class="text-body-1 text-grey-darken-1">Per Month</div>
-              <v-btn class="text-body-1 text-red-darken-1 font-weight-bold" flat>
+              <v-btn
+                class="text-body-1 text-red-darken-1 font-weight-bold"
+                flat
+              >
                 GET STARTED
               </v-btn>
               <div class="text-center text-body-1 text-grey-darken-1">
@@ -573,6 +574,6 @@ const team = [
 const discover_text = [
   "Quias netus magni netsum eos qui ratione sequi",
   "Venis ratione sequi netus enim quia tempor magne",
-  "Venis ratione sequi netus enim quia tempor magne"
-]
+  "Venis ratione sequi netus enim quia tempor magne",
+];
 </script>
