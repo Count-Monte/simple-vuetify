@@ -3,7 +3,6 @@ import Components from 'unplugin-vue-components/vite'
 import Vue from '@vitejs/plugin-vue'
 import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 import ViteFonts from 'unplugin-fonts/vite'
-import Unocss from 'unocss/vite'
 
 // Utilities
 import { defineConfig } from 'vite'
@@ -26,7 +25,6 @@ export default defineConfig({
         }],
       },
     }),
-    Unocss({}),
   ],
   define: { 'process.env': {} },
   resolve: {

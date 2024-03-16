@@ -14,7 +14,6 @@ import App from './App.vue'
 import { createApp } from 'vue'
 
 // Import CSS
-import 'uno.css'
 import './main.css'
 
 const app = createApp(App)
