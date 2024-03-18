@@ -1,5 +1,9 @@
 <template>
-  <v-app theme="light" style="max-width: 1200px" class="ma-auto">
+  <v-app
+    theme="light"
+    style="max-width: 1200px"
+    class="ma-auto"
+  >
     <v-toolbar class="pl-5">
       <template #prepend>
         <div class="text-h4 font-weight-bold my-5 red text-red-darken-2">
@@ -14,8 +18,9 @@
             :key="item"
             variant="text"
             class="text-body-1 blue-grey-darken-4"
-            >{{ item }}</v-btn
           >
+            {{ item }}
+          </v-btn>
         </div>
       </template>
     </v-toolbar>
@@ -41,16 +46,32 @@
             variant="solo"
             label="Enter Your Email Address"
           />
-          <v-btn class="ml-5" height="55px" rounded color="#E52F37" flat
-            >GET STARTED</v-btn
+          <v-btn
+            class="ml-5"
+            height="55px"
+            rounded
+            color="#E52F37"
+            flat
           >
+            GET STARTED
+          </v-btn>
         </div>
       </v-sheet>
       <v-sheet class="d-flex align-center justify-center py-15 ga-5">
-        <img v-for="item in banners" :key="item" :src="item" />
+        <img
+          v-for="item in banners"
+          :key="item"
+          :src="item"
+        >
       </v-sheet>
-      <v-sheet color="#F1FAFF" class="py-15 text-center" height="500px">
-        <div class="text-h4 font-weight-bold">What We Do</div>
+      <v-sheet
+        color="#F1FAFF"
+        class="py-15 text-center"
+        height="500px"
+      >
+        <div class="text-h4 font-weight-bold">
+          What We Do
+        </div>
         <div class="text-body-1 font-weight-regular mt-3 text-grey-darken-2">
           Discover how our amazing team can help your business.
         </div>
@@ -60,8 +81,10 @@
             :key="item.title"
             class="d-flex flex-column align-center"
           >
-            <img :src="item.icon" />
-            <div class="text-h6 mt-1">{{ item.title }}</div>
+            <img :src="item.icon">
+            <div class="text-h6 mt-1">
+              {{ item.title }}
+            </div>
             <div class="text-body-1 mt-2 text-grey-darken-2 w-75">
               {{ item.description }}
             </div>
@@ -73,7 +96,7 @@
         height="500px"
       >
         <div>
-          <img src="./assets/discover_bg.png" />
+          <img src="./assets/discover_bg.png">
         </div>
         <div class="w-50">
           <div class="text-h4">
@@ -84,16 +107,26 @@
             lorem fugit, seditum netis velas matrix net nesciunt
           </div>
           <div
-            class="text-grey-darken-1 my-2"
             v-for="text in discover_text"
             :key="text"
+            class="text-grey-darken-1 my-2"
           >
-            <v-icon icon="mdi-check-bold" color="red" end />
+            <v-icon
+              icon="mdi-check-bold"
+              color="red"
+              end
+            />
             {{ text }}
           </div>
-          <v-btn class="ml-5" height="55px" rounded color="#E52F37" flat
-            >Discover More</v-btn
+          <v-btn
+            class="ml-5"
+            height="55px"
+            rounded
+            color="#E52F37"
+            flat
           >
+            Discover More
+          </v-btn>
         </div>
       </v-sheet>
       <v-sheet
@@ -115,7 +148,7 @@
             :class="{ 'bg-grey-lighten-5 elevation-5 rounded': index === 0 }"
           >
             <template #prepend>
-              <img :src="item.icon" />
+              <img :src="item.icon">
             </template>
 
             <template #title>
@@ -130,18 +163,33 @@
           </v-list-item>
         </v-list>
         <div>
-          <img src="./assets/customize_bg.png" class="elevation-5" />
+          <img
+            src="./assets/customize_bg.png"
+            class="elevation-5"
+          >
         </div>
       </v-sheet>
-      <v-sheet color="#E52F37" height="450px" class="text-center px-15 pt-15">
+      <v-sheet
+        color="#E52F37"
+        height="450px"
+        class="text-center px-15 pt-15"
+      >
         <div class="text-h3 font-weight-bold mb-5">
           Fun Facts About Our Agency
         </div>
         <v-row class="mx-15">
-          <v-col class="mt-10" v-for="item in agency" :key="item.title">
-            <img :src="item.icon" />
-            <div class="text-h4 font-weight-bold mt-5">{{ item.title }}</div>
-            <div class="text-body-1 mt-5">{{ item.description }}</div>
+          <v-col
+            v-for="item in agency"
+            :key="item.title"
+            class="mt-10"
+          >
+            <img :src="item.icon">
+            <div class="text-h4 font-weight-bold mt-5">
+              {{ item.title }}
+            </div>
+            <div class="text-body-1 mt-5">
+              {{ item.description }}
+            </div>
           </v-col>
         </v-row>
       </v-sheet>
@@ -157,7 +205,10 @@
               stationes nets.
             </div>
             <v-row class="mt-5">
-              <div v-for="(item, index) in ['TrustPilot', 'Feefo']" :key="item">
+              <div
+                v-for="(item, index) in ['TrustPilot', 'Feefo']"
+                :key="item"
+              >
                 <v-alert
                   :border="index === 1 ? 'start' : 'none'"
                   border-color="grey"
@@ -173,7 +224,7 @@
                       class="text-yellow-darken-2 ml-0"
                       icon="mdi-star"
                       end
-                    ></v-icon>
+                    />
                   </div>
                 </v-alert>
               </div>
@@ -189,7 +240,7 @@
               outlined
             >
               <div class="d-flex flex-row align-center ga-3">
-                <img src="./assets/avatar.png" />
+                <img src="./assets/avatar.png">
                 <div class="font-weight-bold text-blue-grey-darken-4 text-h6">
                   John Done /
                   <span class="text-green-lighten-1">CEO - Epic Design</span>
@@ -199,34 +250,61 @@
           </v-col>
         </v-row>
       </v-sheet>
-      <v-sheet class="text-center pt-15" height="900px">
-        <div class="text-h4 font-weight-bold">Our Portfolio</div>
+      <v-sheet
+        class="text-center pt-15"
+        height="900px"
+      >
+        <div class="text-h4 font-weight-bold">
+          Our Portfolio
+        </div>
         <div class="text-body-1 text-grey-darken-1 mt-5">
           Discover the latest projects accomplished for my clients.
         </div>
-        <v-row class="mt-5 ga-7 pa-10" style="height: 600px">
+        <v-row
+          class="mt-5 ga-7 pa-10"
+          style="height: 600px"
+        >
           <v-col class="d-flex flex-column align-between ga-7">
-            <v-row class="h-50 bg-grey-lighten-1"></v-row>
-            <v-row class="h-50 bg-grey-lighten-1"></v-row>
+            <v-row class="h-50 bg-grey-lighten-1" />
+            <v-row class="h-50 bg-grey-lighten-1" />
           </v-col>
-          <v-col class="bg-grey-lighten-1"></v-col>
+          <v-col class="bg-grey-lighten-1" />
           <v-col class="d-flex flex-column align-between ga-7">
-            <v-row class="h-30 bg-grey-lighten-1"></v-row>
-            <v-row class="h-30 bg-grey-lighten-1"></v-row>
-            <v-row class="h-30 bg-grey-lighten-1"></v-row>
+            <v-row class="h-30 bg-grey-lighten-1" />
+            <v-row class="h-30 bg-grey-lighten-1" />
+            <v-row class="h-30 bg-grey-lighten-1" />
           </v-col>
         </v-row>
       </v-sheet>
-      <v-sheet class="text-center pt-20" height="800px" color="#F1FAFF">
-        <div class="text-h4 font-weight-bold">Meet Our Team</div>
+      <v-sheet
+        class="text-center pt-20"
+        height="800px"
+        color="#F1FAFF"
+      >
+        <div class="text-h4 font-weight-bold">
+          Meet Our Team
+        </div>
         <div class="text-body-1 text-grey-darken-1 mt-5">
           Discover more about our high performing team.
         </div>
         <v-row class="pa-10">
-          <v-col v-for="person in team" :key="person.name" class="pa-5">
-            <v-card class="bg-white rounded-t-xl pb-5" border="primary md" flat>
-              <img :src="person.image" class="w-100 rounded-t-xl" />
-              <div class="mt-3 text-body-1">{{ person.name }}</div>
+          <v-col
+            v-for="person in team"
+            :key="person.name"
+            class="pa-5"
+          >
+            <v-card
+              class="bg-white rounded-t-xl pb-5"
+              border="primary md"
+              flat
+            >
+              <img
+                :src="person.image"
+                class="w-100 rounded-t-xl"
+              >
+              <div class="mt-3 text-body-1">
+                {{ person.name }}
+              </div>
               <div class="mt-3 text-grey-lighten-1 font-italic text-body-1">
                 {{ person.title }}
               </div>
@@ -247,7 +325,7 @@
         </div>
         <div class="mt-7 text-center">
           Utise wisi enim miim ennam, quis at straioines ullamcorper nets
-          suspicit<br />
+          suspicit<br>
           ets lobot.js risle consequant hihis etim aspernatur netsum.,
         </div>
         <div class="w-50 d-flex justify-space-around mt-15">
@@ -256,19 +334,24 @@
             height="55px"
             rounded
             flat
-            >Discover Mode</v-btn
           >
+            Discover Mode
+          </v-btn>
           <v-btn
             class="ml-5 text-white text-body-2 bg-red-darken-3"
             height="55px"
             rounded
             color="#E52F37"
             flat
-            >Get In Touch</v-btn
           >
+            Get In Touch
+          </v-btn>
         </div>
       </v-sheet>
-      <v-sheet class="text-center" height="500px">
+      <v-sheet
+        class="text-center"
+        height="500px"
+      >
         <div class="text-h4 font-weight-medium mt-15 text-blue-grey-darken-4">
           Amazing Features
         </div>
@@ -283,7 +366,7 @@
             class="d-flex ga-5 pa-5 text-left"
           >
             <div class="mt-2">
-              <img :src="item.icon" />
+              <img :src="item.icon">
             </div>
             <div>
               <div class="text-h6 font-weight-bold text-blue-grey-darken-4">
@@ -296,7 +379,11 @@
           </v-col>
         </v-row>
       </v-sheet>
-      <v-sheet class="d-flex align-center pa-15" height="600px" color="#F1FAFF">
+      <v-sheet
+        class="d-flex align-center pa-15"
+        height="600px"
+        color="#F1FAFF"
+      >
         <v-row class="d-flex align-center">
           <v-col cols="5">
             <div class="text-h4 font-weight-bold text-blue-grey-darken-2">
@@ -311,9 +398,15 @@
             <v-card
               class="pt-10 pb-5 rounded-0 d-flex flex-column align-center justify-center ga-5 elevation-5"
             >
-              <div class="text-h6 font-weight-bold">MONTHLY</div>
-              <div class="text-h2 font-weight-bold">$19</div>
-              <div class="text-body-1 text-grey-darken-1">Per Month</div>
+              <div class="text-h6 font-weight-bold">
+                MONTHLY
+              </div>
+              <div class="text-h2 font-weight-bold">
+                $19
+              </div>
+              <div class="text-body-1 text-grey-darken-1">
+                Per Month
+              </div>
               <v-btn
                 class="text-body-1 text-red-darken-1 font-weight-bold"
                 flat
@@ -321,34 +414,47 @@
                 GET STARTED
               </v-btn>
               <div class="text-center text-body-1 text-grey-darken-1">
-                First two weeks free. <br />
+                First two weeks free. <br>
                 Amazing features.
               </div>
             </v-card>
           </v-col>
-          <v-col cols="4" class="px-5">
+          <v-col
+            cols="4"
+            class="px-5"
+          >
             <v-card
               class="pt-10 pb-5 rounded-0 d-flex flex-column align-center justify-center ga-10 bg-red-darken-1 rounded elevation-5"
             >
-              <div class="text-h6 font-weight-bold">ANNUALY</div>
-              <div class="text-h2 font-weight-bold">$29</div>
-              <div class="text-body-1 text-white">Per Month</div>
+              <div class="text-h6 font-weight-bold">
+                ANNUALY
+              </div>
+              <div class="text-h2 font-weight-bold">
+                $29
+              </div>
+              <div class="text-body-1 text-white">
+                Per Month
+              </div>
               <v-btn
                 class="ml-5 text-red-lighten-1 px-10 text-body-1"
                 height="55px"
                 flat
                 rounded
-                >GET IN TOUCH</v-btn
               >
+                GET IN TOUCH
+              </v-btn>
               <div class="text-center text-body-1 text-white">
-                First two weeks free. <br />
-                Save 45% with this plan<br />Amazing features.
+                First two weeks free. <br>
+                Save 45% with this plan<br>Amazing features.
               </div>
             </v-card>
           </v-col>
         </v-row>
       </v-sheet>
-      <v-sheet class="text-center" height="700px">
+      <v-sheet
+        class="text-center"
+        height="700px"
+      >
         <div class="text-h4 font-weight-medium mt-15 text-blue-grey-darken-4">
           Frequently Asked Questions
         </div>
@@ -356,7 +462,12 @@
           Quis autem velis ets reprehender net etid quiste voluptate
         </div>
         <v-row class="pa-10 text-left">
-          <v-col v-for="n in 4" :key="n" cols="6" class="pa-10">
+          <v-col
+            v-for="n in 4"
+            :key="n"
+            cols="6"
+            class="pa-10"
+          >
             <div class="text-h6 font-weight-bold text-blue-grey-darken-2">
               Velit ut tortizi pretium viverra suspendisse?
             </div>
@@ -368,8 +479,14 @@
           </v-col>
         </v-row>
       </v-sheet>
-      <v-sheet color="#E52F37" height="650px" class="ga-10 text-center pt-15">
-        <div class="text-white text-h4 font-weight-medium">Contact Us</div>
+      <v-sheet
+        color="#E52F37"
+        height="650px"
+        class="ga-10 text-center pt-15"
+      >
+        <div class="text-white text-h4 font-weight-medium">
+          Contact Us
+        </div>
         <div class="text-center text-body-1">
           Have any queries? Get in touch today.
         </div>
@@ -429,8 +546,9 @@
           class="ml-5 text-red-lighten-1 px-10 text-body-1"
           height="55px"
           flat
-          >GET IN TOUCH</v-btn
         >
+          GET IN TOUCH
+        </v-btn>
       </v-sheet>
       <v-footer class="pa-8">
         <div class="text-body-1">
